@@ -11,7 +11,7 @@ FastAPI 主应用入口文件
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
-from app.api import chat, users, workouts, nutrition, progress
+from app.api import chat, users, workouts, nutrition, progress, exercises
 
 # 创建 FastAPI 应用实例
 # title: API 文档标题
@@ -53,6 +53,9 @@ app.include_router(nutrition.router, prefix="/api/nutrition", tags=["Nutrition"]
 
 # 进度模块：处理进度追踪、数据分析等
 app.include_router(progress.router, prefix="/api/progress", tags=["Progress"])
+
+# 动作库模块：处理动作查询和推荐（V1.1 新功能）
+app.include_router(exercises.router, prefix="/api/exercises", tags=["Exercises"])
 
 
 @app.get("/")

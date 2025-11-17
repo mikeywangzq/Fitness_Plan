@@ -1,9 +1,12 @@
 """
 Workout Planning Agent - Specialized in creating training plans.
+
+V1.1: 集成 RAG (检索增强生成) 系统，使用动作知识库提升计划质量
 """
 from typing import Dict, List, Any
 from langchain_openai import ChatOpenAI
 from app.core.config import settings
+from app.services.rag import get_exercise_rag
 import json
 
 
@@ -11,16 +14,60 @@ class WorkoutPlannerAgent:
     """
     Specialized agent for generating personalized workout plans.
     Implements FR-2: 智能化训练计划定制
+
+    V1.1 Updates:
+    - 集成动作库 RAG 系统
+    - 基于向量检索推荐最佳动作
+    - 提供详细的动作说明和技巧
     """
 
     def __init__(self):
-        """Initialize the workout planner agent."""
+        """Initialize the workout planner agent with RAG support."""
         self.llm = ChatOpenAI(
             model=settings.LLM_MODEL,
             temperature=0.3,  # Lower temperature for more consistent plans
             max_tokens=3000,
             openai_api_key=settings.OPENAI_API_KEY,
         )
+
+        # 初始化 RAG 系统
+        try:
+            self.exercise_rag = get_exercise_rag()
+        except Exception as e:
+            print(f"警告: RAG 系统初始化失败: {e}")
+            self.exercise_rag = None
+
+    def _retrieve_relevant_exercises(
+        self,
+        user_profile: Dict[str, Any],
+        n_results: int = 12
+    ) -> List[Dict[str, Any]]:
+        """
+        使用 RAG 系统检索相关动作
+
+        Args:
+            user_profile: 用户资料
+            n_results: 返回动作数量
+
+        Returns:
+            相关动作列表
+        """
+        if not self.exercise_rag:
+            return []
+
+        goal = user_profile.get("fitness_goal", "general_fitness")
+        equipment = user_profile.get("equipment_access", "bodyweight")
+        experience = user_profile.get("experience_level", "beginner")
+
+        # 使用 RAG 推荐动作
+        exercises = self.exercise_rag.recommend_exercises(
+            goal=goal,
+            equipment=equipment,
+            difficulty=experience,
+            n_results=n_results
+        )
+
+        return exercises
 
     async def generate_workout_plan(
         self,
@@ -29,27 +76,57 @@ class WorkoutPlannerAgent:
         """
         Generate a personalized workout plan based on user profile.
 
+        V1.1: 使用 RAG 系统检索最佳动作
+
         Args:
             user_profile: Dictionary containing user information
 
         Returns:
             Structured workout plan
         """
-        prompt = self._create_workout_plan_prompt(user_profile)
+        # 检索相关动作
+        relevant_exercises = self._retrieve_relevant_exercises(user_profile)
+
+        # 生成计划提示词（包含RAG检索的动作）
+        prompt = self._create_workout_plan_prompt(user_profile, relevant_exercises)
         response = await self.llm.apredict(prompt)
 
         # Parse and structure the response
         plan = self._parse_workout_plan(response, user_profile)
 
+        # 添加RAG检索的动作详情
+        if relevant_exercises:
+            plan["recommended_exercises"] = relevant_exercises
+
         return plan
 
-    def _create_workout_plan_prompt(self, user_profile: Dict[str, Any]) -> str:
-        """Create a detailed prompt for workout plan generation."""
+    def _create_workout_plan_prompt(
+        self,
+        user_profile: Dict[str, Any],
+        relevant_exercises: List[Dict[str, Any]] = None
+    ) -> str:
+        """
+        Create a detailed prompt for workout plan generation.
+
+        V1.1: 包含 RAG 检索的推荐动作
+        """
 
         goal = user_profile.get("fitness_goal", "general_fitness")
         experience = user_profile.get("experience_level", "beginner")
         frequency = user_profile.get("training_frequency", 3)
         equipment = user_profile.get("equipment_access", "bodyweight")
+
+        # 构建推荐动作列表
+        exercises_text = ""
+        if relevant_exercises:
+            exercises_text = "\n\n**推荐动作库**（从这些动作中选择）：\n"
+            for ex in relevant_exercises:
+                exercises_text += f"\n- **{ex['name']}** ({ex['english_name']})\n"
+                exercises_text += f"  - 类别: {ex['category']}\n"
+                exercises_text += f"  - 目标肌群: {', '.join(ex['target_muscles'])}\n"
+                exercises_text += f"  - 设备: {ex['equipment']}\n"
+                exercises_text += f"  - 难度: {ex['difficulty']}\n"
+                exercises_text += f"  - 描述: {ex['description']}\n"
 
         prompt = f"""作为专业的健身教练，为以下用户生成一个详细的周训练计划：
 
@@ -60,6 +137,7 @@ class WorkoutPlannerAgent:
 - 可用器械：{equipment}
 - 年龄：{user_profile.get('age', 'N/A')}
 - 性别：{user_profile.get('gender', 'N/A')}
+{exercises_text}
 
 **任务要求**：
 1. 根据训练频率（{frequency}次/周）合理分配训练部位
