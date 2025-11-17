@@ -1,8 +1,11 @@
-import { Outlet, Link, useLocation } from 'react-router-dom'
+import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 import '../styles/layout.css'
 
 function Layout() {
   const location = useLocation()
+  const navigate = useNavigate()
+  const { user, logout } = useAuth()
 
   const navigation = [
     { name: '聊天助手', path: '/' },
@@ -12,6 +15,11 @@ function Layout() {
     { name: '进度分析', path: '/progress' },
   ]
 
+  const handleLogout = () => {
+    logout()
+    navigate('/login')
+  }
+
   return (
     <div className="app-container">
       <nav className="sidebar">
@@ -19,6 +27,19 @@ function Layout() {
           <h1>💪 Fitness Planner</h1>
           <p>AI健身助手</p>
         </div>
+
+        {/* 用户信息 */}
+        {user && (
+          <div className="user-info">
+            <div className="user-avatar">
+              {user.username?.charAt(0).toUpperCase() || 'U'}
+            </div>
+            <div className="user-details">
+              <div className="user-name">{user.username}</div>
+              <div className="user-email">{user.email}</div>
+            </div>
+          </div>
+        )}
 
         <ul className="nav-menu">
           {navigation.map((item) => (
@@ -34,7 +55,10 @@ function Layout() {
         </ul>
 
         <div className="sidebar-footer">
-          <p>v1.0.0</p>
+          <button onClick={handleLogout} className="logout-button">
+            登出
+          </button>
+          <p>v1.1.0</p>
         </div>
       </nav>
 

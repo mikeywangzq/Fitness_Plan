@@ -89,10 +89,17 @@ class UserResponse(UserBase):
         from_attributes = True
 
 
+class UserLogin(BaseModel):
+    """Schema for user login."""
+    email: EmailStr
+    password: str
+
+
 class Token(BaseModel):
     """Token response schema."""
     access_token: str
     token_type: str = "bearer"
+    user: Optional["UserResponse"] = None
 
 
 class TokenData(BaseModel):
