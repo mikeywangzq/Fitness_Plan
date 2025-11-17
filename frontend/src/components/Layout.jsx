@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import '../styles/layout.css'
@@ -6,13 +7,14 @@ function Layout() {
   const location = useLocation()
   const navigate = useNavigate()
   const { user, logout } = useAuth()
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const navigation = [
-    { name: '聊天助手', path: '/' },
-    { name: '仪表盘', path: '/dashboard' },
-    { name: '训练计划', path: '/workout' },
-    { name: '营养追踪', path: '/nutrition' },
-    { name: '进度分析', path: '/progress' },
+    { name: '聊天助手', path: '/', icon: '💬' },
+    { name: '仪表盘', path: '/dashboard', icon: '📊' },
+    { name: '训练计划', path: '/workout', icon: '🏋️' },
+    { name: '营养追踪', path: '/nutrition', icon: '🥗' },
+    { name: '进度分析', path: '/progress', icon: '📈' },
   ]
 
   const handleLogout = () => {
@@ -20,9 +22,35 @@ function Layout() {
     navigate('/login')
   }
 
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen)
+  }
+
+  const closeSidebar = () => {
+    setSidebarOpen(false)
+  }
+
   return (
     <div className="app-container">
-      <nav className="sidebar">
+      {/* 移动端顶部栏 */}
+      <div className="mobile-header">
+        <button className="menu-toggle" onClick={toggleSidebar} aria-label="Toggle menu">
+          <span className="hamburger"></span>
+          <span className="hamburger"></span>
+          <span className="hamburger"></span>
+        </button>
+        <h1 className="mobile-title">💪 Fitness Planner</h1>
+        <div className="mobile-user-avatar">
+          {user?.username?.charAt(0).toUpperCase() || 'U'}
+        </div>
+      </div>
+
+      {/* 遮罩层 */}
+      {sidebarOpen && (
+        <div className="sidebar-overlay" onClick={closeSidebar}></div>
+      )}
+
+      <nav className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
           <h1>💪 Fitness Planner</h1>
           <p>AI健身助手</p>
@@ -47,8 +75,10 @@ function Layout() {
               <Link
                 to={item.path}
                 className={location.pathname === item.path ? 'active' : ''}
+                onClick={closeSidebar}
               >
-                {item.name}
+                <span className="nav-icon">{item.icon}</span>
+                <span className="nav-text">{item.name}</span>
               </Link>
             </li>
           ))}
