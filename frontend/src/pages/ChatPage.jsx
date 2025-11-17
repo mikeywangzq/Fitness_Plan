@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
 import ReactMarkdown from 'react-markdown'
+import VoiceInputButton from '../components/VoiceInputButton'
 import '../styles/chat.css'
 
 function ChatPage() {
@@ -14,6 +15,7 @@ function ChatPage() {
   const [input, setInput] = useState('')
   const [conversationId, setConversationId] = useState(null)
   const messagesEndRef = useRef(null)
+  const inputRef = useRef(null)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -87,6 +89,14 @@ function ChatPage() {
     setInput(action)
   }
 
+  const handleVoiceTranscript = (transcript) => {
+    setInput(transcript)
+    // 自动聚焦到输入框
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
+  }
+
   return (
     <div className="chat-page">
       <div className="chat-header">
@@ -146,12 +156,17 @@ function ChatPage() {
 
         <form onSubmit={handleSubmit} className="chat-input-form">
           <input
+            ref={inputRef}
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="输入你的问题..."
+            placeholder="输入你的问题或点击麦克风..."
             disabled={sendMessageMutation.isPending}
             className="chat-input"
+          />
+          <VoiceInputButton
+            onTranscript={handleVoiceTranscript}
+            className="voice-button-inline"
           />
           <button
             type="submit"

@@ -239,3 +239,63 @@
   overflow-x: auto;
   margin: 0.5rem 0;
 }
+
+/* Voice Input in Chat Form */
+.voice-button-inline {
+  flex-shrink: 0;
+}
+
+.voice-button-inline .voice-input-button {
+  width: 44px;
+  height: 44px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .chat-header {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .chat-container {
+    padding: 1rem;
+  }
+
+  .chat-input-form {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .send-button {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .message {
+    gap: 0.75rem;
+  }
+
+  .message-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .send-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .voice-button-inline .voice-input-button {
+    width: 40px;
+    height: 40px;
+  }
+}
