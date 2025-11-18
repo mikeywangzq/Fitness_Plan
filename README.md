@@ -21,7 +21,8 @@
   <a href="#-快速开始">快速开始</a> •
   <a href="#-技术栈">技术栈</a> •
   <a href="#-api-文档">API 文档</a> •
-  <a href="#-路线图">路线图</a>
+  <a href="#-路线图">路线图</a> •
+  <a href="docs/V1.1_FEATURES.md">V1.1 文档</a>
 </p>
 
 ---
@@ -765,30 +766,41 @@ sudo certbot --nginx -d yourdomain.com
 </tr>
 </table>
 
-### ✅ V1.1 (已完成 - 2025年1月)
+### ✅ V1.1 (已完成 - 2025年1月) - 87.5% 完成
+
+> 📄 [详细功能文档](docs/V1.1_FEATURES.md)
 
 <table>
 <tr>
 <td width="50%">
 
 **核心功能**
-- [x] ✅ 用户认证和授权系统
-- [x] ✅ 动作库 RAG (检索增强生成)
-- [x] ✅ 语音输入支持
-- [x] ✅ 移动端响应式优化
+- [x] ✅ **用户认证和授权系统** - JWT Token、bcrypt 密码加密
+- [x] ✅ **动作库 RAG 系统** - ChromaDB 向量检索、500+ 健身动作
+- [x] ✅ **语音输入支持** - Web Speech API、中文语音识别
+- [x] ✅ **移动端响应式优化** - 完整适配手机/平板/桌面
 
 </td>
 <td width="50%">
 
 **体验优化**
-- [x] ✅ UI/UX 改进
-- [x] ✅ 数据可视化增强
-- [x] ✅ 消息推送和提醒
-- [ ] 🌍 多语言支持 (i18n)
+- [x] ✅ **UI/UX 改进** - 设计系统、交互优化、无障碍支持
+- [x] ✅ **数据可视化增强** - Recharts 图表、体重趋势、训练统计
+- [x] ✅ **消息推送和提醒** - 浏览器通知、训练/饮食/喝水提醒
+- [ ] 🌍 **多语言支持 (i18n)** - 计划支持中/英/日/韩
 
 </td>
 </tr>
 </table>
+
+**新增组件:**
+- `WeightTrendChart` - 体重趋势折线图
+- `WorkoutVolumeChart` - 训练量柱状图
+- `NutritionChart` - 营养摄入饼图
+- `ReminderSettings` - 智能提醒设置
+- `VoiceInput` - 语音输入按钮
+- `useNotification` - 通知管理 Hook
+- `useVoiceInput` - 语音识别 Hook
 
 ### 🌟 V2.0 (规划中 - 2024 Q3-Q4)
 
