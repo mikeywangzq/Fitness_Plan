@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import App from './App'
 import './styles/index.css'
+import './i18n' // 导入 i18n 配置
 
 const queryClient = new QueryClient({
   defaultOptions: {

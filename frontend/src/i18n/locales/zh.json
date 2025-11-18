@@ -1,0 +1,178 @@
+{
+  "common": {
+    "appName": "健身训练规划 Agent",
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "confirm": "确认",
+    "delete": "删除",
+    "edit": "编辑",
+    "close": "关闭",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "search": "搜索"
+  },
+
+  "nav": {
+    "chat": "AI 对话",
+    "onboarding": "用户引导",
+    "dashboard": "仪表盘",
+    "workout": "训练计划",
+    "nutrition": "营养管理",
+    "progress": "进度分析",
+    "logout": "退出登录"
+  },
+
+  "auth": {
+    "login": "登录",
+    "register": "注册",
+    "username": "用户名",
+    "email": "邮箱",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "forgotPassword": "忘记密码？",
+    "noAccount": "还没有账号？",
+    "hasAccount": "已有账号？",
+    "loginNow": "立即登录",
+    "registerNow": "立即注册",
+    "loginSuccess": "登录成功",
+    "registerSuccess": "注册成功",
+    "loginFailed": "登录失败",
+    "registerFailed": "注册失败"
+  },
+
+  "dashboard": {
+    "title": "仪表盘",
+    "subtitle": "快速查看你的健身数据和设置提醒",
+    "weeklyWorkout": "本周训练",
+    "todayNutrition": "今日营养",
+    "weightChange": "体重变化",
+    "trainingIntensity": "训练强度",
+    "times": "次",
+    "thisWeek": "本周",
+    "moderate": "中等",
+    "keepGood": "保持良好",
+    "dailyGoals": "今日目标",
+    "completedBreakfast": "完成早餐营养记录",
+    "completedWorkout": "完成今日训练计划",
+    "drankWater": "饮水 2000ml",
+    "recordDinner": "晚餐前完成记录"
+  },
+
+  "progress": {
+    "title": "进度分析",
+    "subtitle": "追踪你的健身成就和进步",
+    "currentWeight": "当前体重",
+    "workoutCount": "训练次数",
+    "workoutStreak": "连续训练",
+    "totalSets": "总训练组数",
+    "completedThisMonth": "本月已完成",
+    "keepGoodHabit": "保持良好习惯",
+    "keepBreaking": "不断突破",
+    "days": "天",
+    "weightTrend": "体重趋势",
+    "workoutVolume": "训练量统计",
+    "nutritionDistribution": "营养摄入分布",
+    "achievements": "成就徽章",
+    "newbie": "新手上路",
+    "newbieDesc": "完成第一次训练",
+    "persistent": "坚持者",
+    "persistentDesc": "连续训练 5 天",
+    "hundredSets": "百组达人",
+    "hundredSetsDesc": "单周完成 100 组训练",
+    "monthChampion": "月度冠军",
+    "monthChampionDesc": "单月训练 20 次",
+    "week": "第{{number}}周",
+    "sessions": "训练次数",
+    "sets": "总组数",
+    "protein": "蛋白质",
+    "carbs": "碳水化合物",
+    "fat": "脂肪",
+    "totalCalories": "总热量",
+    "kcal": "千卡",
+    "actualWeight": "实际体重",
+    "targetWeight": "目标体重",
+    "noData": "暂无数据",
+    "startRecording": "开始记录你的{{type}}吧"
+  },
+
+  "reminders": {
+    "title": "提醒设置",
+    "subtitle": "设置训练和饮食提醒，养成良好习惯",
+    "notSupported": "您的浏览器不支持通知功能",
+    "notSupportedHint": "请使用 Chrome、Firefox 或 Edge 浏览器",
+    "permissionNotGranted": "通知权限未授予",
+    "permissionGranted": "通知权限已授予",
+    "permissionDenied": "通知权限被拒绝，请在浏览器设置中允许通知",
+    "enableNotifications": "启用通知",
+    "sendTestNotification": "发送测试通知",
+    "testSent": "已发送测试通知",
+
+    "workout": "训练提醒",
+    "breakfast": "早餐提醒",
+    "lunch": "午餐提醒",
+    "dinner": "晚餐提醒",
+    "water": "喝水提醒",
+
+    "reminderTime": "提醒时间",
+    "reminderDays": "提醒日期",
+    "reminderInterval": "提醒间隔（分钟）",
+
+    "sunday": "日",
+    "monday": "一",
+    "tuesday": "二",
+    "wednesday": "三",
+    "thursday": "四",
+    "friday": "五",
+    "saturday": "六",
+
+    "workoutNotification": "该进行{{name}}训练了！保持规律，成就更好的自己",
+    "mealNotification": "该吃{{type}}了！营养均衡很重要",
+    "waterNotification": "该补充水分了！保持充足的水分摄入"
+  },
+
+  "charts": {
+    "weightTrend": "体重趋势",
+    "workoutVolume": "训练量统计",
+    "nutritionChart": "营养摄入分布",
+    "noChartData": "暂无数据",
+    "startRecordingWeight": "开始记录你的体重变化吧",
+    "startRecordingWorkout": "完成你的第一次训练吧",
+    "startRecordingNutrition": "记录你的饮食营养吧"
+  },
+
+  "voice": {
+    "voiceInput": "语音输入",
+    "listening": "正在聆听...",
+    "clickToSpeak": "点击说话",
+    "notSupported": "浏览器不支持语音识别"
+  },
+
+  "chat": {
+    "title": "AI 健身助手",
+    "subtitle": "与AI对话，获取个性化健身建议",
+    "placeholder": "输入你的问题...",
+    "send": "发送",
+    "thinking": "思考中...",
+    "error": "发送失败，请重试"
+  },
+
+  "errors": {
+    "networkError": "网络错误，请检查网络连接",
+    "serverError": "服务器错误，请稍后重试",
+    "unauthorized": "未授权，请先登录",
+    "notFound": "未找到资源",
+    "validationError": "验证失败",
+    "unknownError": "未知错误"
+  },
+
+  "settings": {
+    "language": "语言",
+    "theme": "主题",
+    "notifications": "通知",
+    "privacy": "隐私",
+    "about": "关于"
+  }
+}

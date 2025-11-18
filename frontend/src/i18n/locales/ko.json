@@ -1,0 +1,178 @@
+{
+  "common": {
+    "appName": "피트니스 플래닝 에이전트",
+    "loading": "로딩 중...",
+    "save": "저장",
+    "cancel": "취소",
+    "confirm": "확인",
+    "delete": "삭제",
+    "edit": "편집",
+    "close": "닫기",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "submit": "제출",
+    "search": "검색"
+  },
+
+  "nav": {
+    "chat": "AI 채팅",
+    "onboarding": "가이드",
+    "dashboard": "대시보드",
+    "workout": "운동",
+    "nutrition": "영양",
+    "progress": "진행상황",
+    "logout": "로그아웃"
+  },
+
+  "auth": {
+    "login": "로그인",
+    "register": "회원가입",
+    "username": "사용자명",
+    "email": "이메일",
+    "password": "비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "noAccount": "계정이 없으신가요?",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "loginNow": "지금 로그인",
+    "registerNow": "지금 가입",
+    "loginSuccess": "로그인 성공",
+    "registerSuccess": "가입 성공",
+    "loginFailed": "로그인 실패",
+    "registerFailed": "가입 실패"
+  },
+
+  "dashboard": {
+    "title": "대시보드",
+    "subtitle": "피트니스 데이터 확인 및 알림 설정",
+    "weeklyWorkout": "주간 운동",
+    "todayNutrition": "오늘의 영양",
+    "weightChange": "체중 변화",
+    "trainingIntensity": "운동 강도",
+    "times": "회",
+    "thisWeek": "이번 주",
+    "moderate": "중간",
+    "keepGood": "좋은 상태 유지",
+    "dailyGoals": "오늘의 목표",
+    "completedBreakfast": "아침 영양 기록 완료",
+    "completedWorkout": "오늘의 운동 완료",
+    "drankWater": "물 2000ml 마시기",
+    "recordDinner": "저녁 식사 전 기록 완료"
+  },
+
+  "progress": {
+    "title": "진행 상황 분석",
+    "subtitle": "피트니스 성과와 진전 추적",
+    "currentWeight": "현재 체중",
+    "workoutCount": "운동 횟수",
+    "workoutStreak": "연속 운동",
+    "totalSets": "총 세트 수",
+    "completedThisMonth": "이번 달 완료",
+    "keepGoodHabit": "좋은 습관 유지",
+    "keepBreaking": "계속 돌파 중",
+    "days": "일",
+    "weightTrend": "체중 추세",
+    "workoutVolume": "운동량 통계",
+    "nutritionDistribution": "영양 분포",
+    "achievements": "업적 배지",
+    "newbie": "첫 운동",
+    "newbieDesc": "첫 운동 완료",
+    "persistent": "꾸준함",
+    "persistentDesc": "5일 연속 운동",
+    "hundredSets": "100세트 달성",
+    "hundredSetsDesc": "주당 100세트 완료",
+    "monthChampion": "월간 챔피언",
+    "monthChampionDesc": "월 20회 운동",
+    "week": "{{number}}주차",
+    "sessions": "세션",
+    "sets": "총 세트",
+    "protein": "단백질",
+    "carbs": "탄수화물",
+    "fat": "지방",
+    "totalCalories": "총 칼로리",
+    "kcal": "kcal",
+    "actualWeight": "실제 체중",
+    "targetWeight": "목표 체중",
+    "noData": "데이터 없음",
+    "startRecording": "{{type}} 기록을 시작하세요"
+  },
+
+  "reminders": {
+    "title": "알림 설정",
+    "subtitle": "운동 및 식사 알림을 설정하여 좋은 습관 만들기",
+    "notSupported": "브라우저가 알림 기능을 지원하지 않습니다",
+    "notSupportedHint": "Chrome, Firefox 또는 Edge를 사용하세요",
+    "permissionNotGranted": "알림 권한이 부여되지 않았습니다",
+    "permissionGranted": "알림 권한이 부여되었습니다",
+    "permissionDenied": "알림 권한이 거부되었습니다. 브라우저 설정에서 허용하세요",
+    "enableNotifications": "알림 활성화",
+    "sendTestNotification": "테스트 알림 보내기",
+    "testSent": "테스트 알림이 전송되었습니다",
+
+    "workout": "운동 알림",
+    "breakfast": "아침 식사 알림",
+    "lunch": "점심 식사 알림",
+    "dinner": "저녁 식사 알림",
+    "water": "물 마시기 알림",
+
+    "reminderTime": "알림 시간",
+    "reminderDays": "알림 요일",
+    "reminderInterval": "알림 간격 (분)",
+
+    "sunday": "일",
+    "monday": "월",
+    "tuesday": "화",
+    "wednesday": "수",
+    "thursday": "목",
+    "friday": "금",
+    "saturday": "토",
+
+    "workoutNotification": "{{name}} 시간입니다! 꾸준함이 힘입니다",
+    "mealNotification": "{{type}} 시간입니다! 균형 잡힌 영양이 중요합니다",
+    "waterNotification": "수분 보충 시간입니다! 충분한 수분을 유지하세요"
+  },
+
+  "charts": {
+    "weightTrend": "체중 추세",
+    "workoutVolume": "운동량",
+    "nutritionChart": "영양 분포",
+    "noChartData": "데이터 없음",
+    "startRecordingWeight": "체중 기록 시작",
+    "startRecordingWorkout": "첫 운동 완료",
+    "startRecordingNutrition": "영양 기록 시작"
+  },
+
+  "voice": {
+    "voiceInput": "음성 입력",
+    "listening": "듣는 중...",
+    "clickToSpeak": "클릭하여 말하기",
+    "notSupported": "음성 인식이 지원되지 않습니다"
+  },
+
+  "chat": {
+    "title": "AI 피트니스 코치",
+    "subtitle": "AI와 채팅하여 맞춤형 피트니스 조언 받기",
+    "placeholder": "질문을 입력하세요...",
+    "send": "보내기",
+    "thinking": "생각 중...",
+    "error": "전송 실패, 다시 시도하세요"
+  },
+
+  "errors": {
+    "networkError": "네트워크 오류, 연결을 확인하세요",
+    "serverError": "서버 오류, 나중에 다시 시도하세요",
+    "unauthorized": "인증되지 않음, 먼저 로그인하세요",
+    "notFound": "리소스를 찾을 수 없습니다",
+    "validationError": "유효성 검사 실패",
+    "unknownError": "알 수 없는 오류"
+  },
+
+  "settings": {
+    "language": "언어",
+    "theme": "테마",
+    "notifications": "알림",
+    "privacy": "개인정보",
+    "about": "정보"
+  }
+}

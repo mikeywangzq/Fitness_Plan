@@ -1,0 +1,178 @@
+{
+  "common": {
+    "appName": "Fitness Planning Agent",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "search": "Search"
+  },
+
+  "nav": {
+    "chat": "AI Chat",
+    "onboarding": "Onboarding",
+    "dashboard": "Dashboard",
+    "workout": "Workout",
+    "nutrition": "Nutrition",
+    "progress": "Progress",
+    "logout": "Logout"
+  },
+
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginNow": "Login Now",
+    "registerNow": "Register Now",
+    "loginSuccess": "Login successful",
+    "registerSuccess": "Registration successful",
+    "loginFailed": "Login failed",
+    "registerFailed": "Registration failed"
+  },
+
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "View your fitness data and set reminders",
+    "weeklyWorkout": "Weekly Workout",
+    "todayNutrition": "Today's Nutrition",
+    "weightChange": "Weight Change",
+    "trainingIntensity": "Training Intensity",
+    "times": "times",
+    "thisWeek": "This Week",
+    "moderate": "Moderate",
+    "keepGood": "Keep it up",
+    "dailyGoals": "Daily Goals",
+    "completedBreakfast": "Log breakfast nutrition",
+    "completedWorkout": "Complete today's workout",
+    "drankWater": "Drink 2000ml water",
+    "recordDinner": "Record dinner before eating"
+  },
+
+  "progress": {
+    "title": "Progress Analysis",
+    "subtitle": "Track your fitness achievements and progress",
+    "currentWeight": "Current Weight",
+    "workoutCount": "Workout Count",
+    "workoutStreak": "Workout Streak",
+    "totalSets": "Total Sets",
+    "completedThisMonth": "Completed this month",
+    "keepGoodHabit": "Keep good habits",
+    "keepBreaking": "Keep breaking through",
+    "days": "days",
+    "weightTrend": "Weight Trend",
+    "workoutVolume": "Workout Volume",
+    "nutritionDistribution": "Nutrition Distribution",
+    "achievements": "Achievements",
+    "newbie": "First Timer",
+    "newbieDesc": "Complete first workout",
+    "persistent": "Persistent",
+    "persistentDesc": "5 day workout streak",
+    "hundredSets": "Century",
+    "hundredSetsDesc": "100 sets in a week",
+    "monthChampion": "Monthly Champion",
+    "monthChampionDesc": "20 workouts in a month",
+    "week": "Week {{number}}",
+    "sessions": "Sessions",
+    "sets": "Total Sets",
+    "protein": "Protein",
+    "carbs": "Carbs",
+    "fat": "Fat",
+    "totalCalories": "Total Calories",
+    "kcal": "kcal",
+    "actualWeight": "Actual Weight",
+    "targetWeight": "Target Weight",
+    "noData": "No data yet",
+    "startRecording": "Start recording your {{type}}"
+  },
+
+  "reminders": {
+    "title": "Reminder Settings",
+    "subtitle": "Set workout and meal reminders to build good habits",
+    "notSupported": "Your browser doesn't support notifications",
+    "notSupportedHint": "Please use Chrome, Firefox, or Edge",
+    "permissionNotGranted": "Notification permission not granted",
+    "permissionGranted": "Notification permission granted",
+    "permissionDenied": "Notification permission denied. Please allow in browser settings",
+    "enableNotifications": "Enable Notifications",
+    "sendTestNotification": "Send Test Notification",
+    "testSent": "Test notification sent",
+
+    "workout": "Workout Reminder",
+    "breakfast": "Breakfast Reminder",
+    "lunch": "Lunch Reminder",
+    "dinner": "Dinner Reminder",
+    "water": "Water Reminder",
+
+    "reminderTime": "Reminder Time",
+    "reminderDays": "Reminder Days",
+    "reminderInterval": "Reminder Interval (minutes)",
+
+    "sunday": "Sun",
+    "monday": "Mon",
+    "tuesday": "Tue",
+    "wednesday": "Wed",
+    "thursday": "Thu",
+    "friday": "Fri",
+    "saturday": "Sat",
+
+    "workoutNotification": "Time for {{name}}! Stay consistent, achieve greatness",
+    "mealNotification": "Time for {{type}}! Balanced nutrition is key",
+    "waterNotification": "Time to hydrate! Stay well-hydrated"
+  },
+
+  "charts": {
+    "weightTrend": "Weight Trend",
+    "workoutVolume": "Workout Volume",
+    "nutritionChart": "Nutrition Distribution",
+    "noChartData": "No data yet",
+    "startRecordingWeight": "Start tracking your weight",
+    "startRecordingWorkout": "Complete your first workout",
+    "startRecordingNutrition": "Start logging your nutrition"
+  },
+
+  "voice": {
+    "voiceInput": "Voice Input",
+    "listening": "Listening...",
+    "clickToSpeak": "Click to speak",
+    "notSupported": "Voice recognition not supported"
+  },
+
+  "chat": {
+    "title": "AI Fitness Coach",
+    "subtitle": "Chat with AI for personalized fitness advice",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "error": "Failed to send, please retry"
+  },
+
+  "errors": {
+    "networkError": "Network error, please check your connection",
+    "serverError": "Server error, please try again later",
+    "unauthorized": "Unauthorized, please login first",
+    "notFound": "Resource not found",
+    "validationError": "Validation failed",
+    "unknownError": "Unknown error"
+  },
+
+  "settings": {
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "privacy": "Privacy",
+    "about": "About"
+  }
+}

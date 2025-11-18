@@ -1,0 +1,178 @@
+{
+  "common": {
+    "appName": "フィットネスプランニングエージェント",
+    "loading": "読み込み中...",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "delete": "削除",
+    "edit": "編集",
+    "close": "閉じる",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "search": "検索"
+  },
+
+  "nav": {
+    "chat": "AIチャット",
+    "onboarding": "ガイド",
+    "dashboard": "ダッシュボード",
+    "workout": "トレーニング",
+    "nutrition": "栄養管理",
+    "progress": "進捗分析",
+    "logout": "ログアウト"
+  },
+
+  "auth": {
+    "login": "ログイン",
+    "register": "登録",
+    "username": "ユーザー名",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワード確認",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "loginNow": "今すぐログイン",
+    "registerNow": "今すぐ登録",
+    "loginSuccess": "ログイン成功",
+    "registerSuccess": "登録成功",
+    "loginFailed": "ログイン失敗",
+    "registerFailed": "登録失敗"
+  },
+
+  "dashboard": {
+    "title": "ダッシュボード",
+    "subtitle": "フィットネスデータを確認し、リマインダーを設定",
+    "weeklyWorkout": "今週のトレーニング",
+    "todayNutrition": "今日の栄養",
+    "weightChange": "体重変化",
+    "trainingIntensity": "トレーニング強度",
+    "times": "回",
+    "thisWeek": "今週",
+    "moderate": "中程度",
+    "keepGood": "良好を維持",
+    "dailyGoals": "今日の目標",
+    "completedBreakfast": "朝食の栄養記録を完了",
+    "completedWorkout": "今日のトレーニングを完了",
+    "drankWater": "2000ml の水を飲む",
+    "recordDinner": "夕食前に記録を完了"
+  },
+
+  "progress": {
+    "title": "進捗分析",
+    "subtitle": "フィットネスの成果と進歩を追跡",
+    "currentWeight": "現在の体重",
+    "workoutCount": "トレーニング回数",
+    "workoutStreak": "連続トレーニング",
+    "totalSets": "総セット数",
+    "completedThisMonth": "今月完了",
+    "keepGoodHabit": "良い習慣を維持",
+    "keepBreaking": "記録更新中",
+    "days": "日",
+    "weightTrend": "体重推移",
+    "workoutVolume": "トレーニング量統計",
+    "nutritionDistribution": "栄養摂取分布",
+    "achievements": "達成バッジ",
+    "newbie": "初心者",
+    "newbieDesc": "初回トレーニング完了",
+    "persistent": "継続者",
+    "persistentDesc": "5日連続トレーニング",
+    "hundredSets": "100セット達成",
+    "hundredSetsDesc": "週100セット完了",
+    "monthChampion": "月間チャンピオン",
+    "monthChampionDesc": "月20回トレーニング",
+    "week": "第{{number}}週",
+    "sessions": "セッション",
+    "sets": "総セット数",
+    "protein": "タンパク質",
+    "carbs": "炭水化物",
+    "fat": "脂質",
+    "totalCalories": "総カロリー",
+    "kcal": "kcal",
+    "actualWeight": "実際の体重",
+    "targetWeight": "目標体重",
+    "noData": "データなし",
+    "startRecording": "{{type}}の記録を始めましょう"
+  },
+
+  "reminders": {
+    "title": "リマインダー設定",
+    "subtitle": "トレーニングと食事のリマインダーを設定して良い習慣を築く",
+    "notSupported": "お使いのブラウザは通知機能に対応していません",
+    "notSupportedHint": "Chrome、Firefox、またはEdgeをご利用ください",
+    "permissionNotGranted": "通知許可が付与されていません",
+    "permissionGranted": "通知許可が付与されました",
+    "permissionDenied": "通知許可が拒否されました。ブラウザ設定で許可してください",
+    "enableNotifications": "通知を有効にする",
+    "sendTestNotification": "テスト通知を送信",
+    "testSent": "テスト通知を送信しました",
+
+    "workout": "トレーニングリマインダー",
+    "breakfast": "朝食リマインダー",
+    "lunch": "昼食リマインダー",
+    "dinner": "夕食リマインダー",
+    "water": "水分補給リマインダー",
+
+    "reminderTime": "リマインダー時刻",
+    "reminderDays": "リマインダー曜日",
+    "reminderInterval": "リマインダー間隔（分）",
+
+    "sunday": "日",
+    "monday": "月",
+    "tuesday": "火",
+    "wednesday": "水",
+    "thursday": "木",
+    "friday": "金",
+    "saturday": "土",
+
+    "workoutNotification": "{{name}}の時間です！継続は力なり",
+    "mealNotification": "{{type}}の時間です！バランスの取れた栄養が重要です",
+    "waterNotification": "水分補給の時間です！十分な水分を保ちましょう"
+  },
+
+  "charts": {
+    "weightTrend": "体重推移",
+    "workoutVolume": "トレーニング量",
+    "nutritionChart": "栄養摂取分布",
+    "noChartData": "データなし",
+    "startRecordingWeight": "体重の記録を始めましょう",
+    "startRecordingWorkout": "最初のトレーニングを完了しましょう",
+    "startRecordingNutrition": "栄養の記録を始めましょう"
+  },
+
+  "voice": {
+    "voiceInput": "音声入力",
+    "listening": "聞いています...",
+    "clickToSpeak": "クリックして話す",
+    "notSupported": "音声認識に対応していません"
+  },
+
+  "chat": {
+    "title": "AIフィットネスコーチ",
+    "subtitle": "AIとチャットして個別のフィットネスアドバイスを取得",
+    "placeholder": "質問を入力...",
+    "send": "送信",
+    "thinking": "考え中...",
+    "error": "送信に失敗しました。もう一度お試しください"
+  },
+
+  "errors": {
+    "networkError": "ネットワークエラー。接続を確認してください",
+    "serverError": "サーバーエラー。後でもう一度お試しください",
+    "unauthorized": "未認証。ログインしてください",
+    "notFound": "リソースが見つかりません",
+    "validationError": "検証に失敗しました",
+    "unknownError": "不明なエラー"
+  },
+
+  "settings": {
+    "language": "言語",
+    "theme": "テーマ",
+    "notifications": "通知",
+    "privacy": "プライバシー",
+    "about": "について"
+  }
+}

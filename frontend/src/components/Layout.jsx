@@ -1,20 +1,23 @@
 import { useState } from 'react'
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
+import LanguageSwitcher from './LanguageSwitcher'
 import '../styles/layout.css'
 
 function Layout() {
+  const { t } = useTranslation()
   const location = useLocation()
   const navigate = useNavigate()
   const { user, logout } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const navigation = [
-    { name: '聊天助手', path: '/', icon: '💬' },
-    { name: '仪表盘', path: '/dashboard', icon: '📊' },
-    { name: '训练计划', path: '/workout', icon: '🏋️' },
-    { name: '营养追踪', path: '/nutrition', icon: '🥗' },
-    { name: '进度分析', path: '/progress', icon: '📈' },
+    { name: t('nav.chat'), path: '/', icon: '💬' },
+    { name: t('nav.dashboard'), path: '/dashboard', icon: '📊' },
+    { name: t('nav.workout'), path: '/workout', icon: '🏋️' },
+    { name: t('nav.nutrition'), path: '/nutrition', icon: '🥗' },
+    { name: t('nav.progress'), path: '/progress', icon: '📈' },
   ]
 
   const handleLogout = () => {
@@ -39,7 +42,7 @@ function Layout() {
           <span className="hamburger"></span>
           <span className="hamburger"></span>
         </button>
-        <h1 className="mobile-title">💪 Fitness Planner</h1>
+        <h1 className="mobile-title">💪 {t('common.appName')}</h1>
         <div className="mobile-user-avatar">
           {user?.username?.charAt(0).toUpperCase() || 'U'}
         </div>
@@ -52,8 +55,8 @@ function Layout() {
 
       <nav className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <h1>💪 Fitness Planner</h1>
-          <p>AI健身助手</p>
+          <h1>💪 {t('common.appName')}</h1>
+          <LanguageSwitcher />
         </div>
 
         {/* 用户信息 */}
@@ -86,7 +89,7 @@ function Layout() {
 
         <div className="sidebar-footer">
           <button onClick={handleLogout} className="logout-button">
-            登出
+            {t('nav.logout')}
           </button>
           <p>v1.1.0</p>
         </div>
