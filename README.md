@@ -766,7 +766,7 @@ sudo certbot --nginx -d yourdomain.com
 </tr>
 </table>
 
-### ✅ V1.1 (已完成 - 2025年1月) - 87.5% 完成
+### ✅ V1.1 (已完成 - 2025年1月) - 🎉 100% 完成
 
 > 📄 [详细功能文档](docs/V1.1_FEATURES.md)
 
@@ -787,7 +787,7 @@ sudo certbot --nginx -d yourdomain.com
 - [x] ✅ **UI/UX 改进** - 设计系统、交互优化、无障碍支持
 - [x] ✅ **数据可视化增强** - Recharts 图表、体重趋势、训练统计
 - [x] ✅ **消息推送和提醒** - 浏览器通知、训练/饮食/喝水提醒
-- [ ] 🌍 **多语言支持 (i18n)** - 计划支持中/英/日/韩
+- [x] ✅ **多语言支持 (i18n)** - 支持中/英/日/韩 4 种语言
 
 </td>
 </tr>
@@ -799,8 +799,15 @@ sudo certbot --nginx -d yourdomain.com
 - `NutritionChart` - 营养摄入饼图
 - `ReminderSettings` - 智能提醒设置
 - `VoiceInput` - 语音输入按钮
+- `LanguageSwitcher` - 语言切换器
 - `useNotification` - 通知管理 Hook
 - `useVoiceInput` - 语音识别 Hook
+
+**翻译文件:**
+- `locales/zh.json` - 中文翻译 (240+ 条)
+- `locales/en.json` - 英文翻译 (240+ 条)
+- `locales/ja.json` - 日文翻译 (240+ 条)
+- `locales/ko.json` - 韩文翻译 (240+ 条)
 
 ### 🌟 V2.0 (规划中 - 2024 Q3-Q4)
 
